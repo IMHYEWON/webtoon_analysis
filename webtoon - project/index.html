@@ -4,6 +4,125 @@
 <head>
 
   <meta charset="utf-8">
+
+<!-- 워드 클라우드 스크립트  ------>
+<script src="https://www.koolchart.com/demo/LicenseKey/KoolChartLicense.js"></script>
+  <script src="https://www.koolchart.com/demo/KoolChart/JS/KoolChart.js"></script>
+  <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css"/>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  KoolChart.create("chart1", "chartHolder1", "", "100%", "100%");
+   KoolChart.create("chart2", "chartHolder2", "", "100%", "100%");
+  var layoutStr =
+             '<KoolChart backgroundColor="#FFFFFF" borderStyle="none" fontFamily="Noto Sans">' // The Google web fonts are used in this sample.
+                    /*
+                      Declares <WordCloudChart>
+                     showDataTips: Whether or not to show tooltips when the user mouse overs the item.
+                   */
+                  +'<WordCloudChart showDataTips="true" selectionMode="single">'
+                        +'<series>'
+                           /*
+                              Declares <WordCloudSeries>
+                            */
+                          +'<WordCloudSeries>'
+                              +'<showDataEffect>'
+                                   +'<SeriesInterpolate duration="1000"/>'
+                               +'</showDataEffect>'
+                              +'<fills>'
+                                    +'<SolidColor color="#5473b3"/>'
+                                  +'<SolidColor color="#3fb1e7"/>'
+                                  +'<SolidColor color="#27a6b5"/>'
+                                  +'<SolidColor color="#86d3ed"/>'
+                                  +'<SolidColor color="#404362"/>'
+                              +'</fills>'
+                           +'</WordCloudSeries>'
+                     +'</series>'
+                  +'</WordCloudChart>'
+              +'</KoolChart>';
+  var chartData = ["PRAY","NEW","DO","DESIGN","COMMUNICATE","GREAT","LEAD","MOMENT","LOVE","DO","NEW","PRAY","GREAT","DESIGN","CREATIVE","LOVE","STUNNING","PRAY","LOVELY","DESIGN","GET","GOOD","NEW","COMMUNICATE","LOVE","NEW","LEAD","SUCCESS","LOVELY","LOVE","LEARN","PRAY","LOVE","COOL","DO","LOVE","GORGEOUS","HAPPY","GOAL","STORY","LOVE","STUNNING","COMMUNICATE","PRAY","GREAT","HAVE","LOVE","PEOPLE","MIRACLE","COMMUNICATE","WALK","LOVE","DO","COOL","WALK","PRAY","LIKE","LOVELY","NEW","DESIGN","TEACH","안녕","DO"];
+
+// Use the KoolChart.calls function to register the functions to be executed when the chart is ready.
+//
+// argument 1 - Chart Identifier
+// argument 2 - The function name to be executed (key) and the argument to be passed to the function (value)
+KoolChart.calls("chart1", {
+  "setLayout" : layoutStr,
+    "setData" : chartData
+});
+KoolChart.calls("chart2", {
+  "setLayout" : layoutStr,
+    "setData" : chartData
+});
+
+/**
+ * If you want to use themes provided with KoolChart version 3.0 or later, call the following functions.
+ * otherwise, comment out or delete the following functions.
+ *
+ * -- The Themes registered in KoolChart.themes --
+ * - simple
+ * - cyber
+ * - modern
+ * - lovely
+ * - pastel
+ * -------------------------------------------------
+ *
+ * The KoolChart.themes variable is defined in theme.js
+ */
+KoolChart.registerTheme(KoolChart.themes);
+
+/**
+ * The function called when the theme button in the sample HTML is clicked.
+ * Parameter Values:
+ * - simple
+ * - cyber
+ * - modern
+ * - lovely
+ * - pastel
+ * - default
+ *
+ * default: Applies the default theme which is the basic design of KoolChart.
+ */
+function KoolChartChangeTheme(theme){
+  document.getElementById("chart1").setTheme(theme);
+}
+function KoolChartChangeTheme(theme){
+  document.getElementById("chart2").setTheme(theme);
+}
+  </script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+          ,chartArea:{left:2,top:2,width:"90%",height:"70%"}
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+        window.addEventListener('resize', function() { chart.draw(data,options); }, false);
+
+      }
+    </script>
+
+
+
+<!-- 워드클라우드 스크립트------->
+
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -372,7 +491,7 @@
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a> -->
               <!-- Dropdown - User Information -->
-              <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              <!-- <div class="dropdown-menu dropdown-menu-right shadow animatedgrow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
@@ -537,11 +656,11 @@
               </div>
             </div>
 
-            <div class="col-xl-9 col-lg-7">
+            <div class="col-xl-4 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="nanum m-0 font-weight-bold text-primary">작가 작품 키워드</h6>
+                  <h6 class="nanum m-0 font-weight-bold text-primary">작가 키워드</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -557,16 +676,39 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div id="app"></div>
-                  <div id="html">
-                          <div id="chart">
-                          <ReactApexChart options={this.state.options} series={this.state.series} type="heatmap" height="400" />
-                          </div>
+
+                  <div id="chartHolder1" style="width:350px; height:400px;">
                   </div>
                 </div>
               </div>
             </div>
 
+            <div class="col-xl-4 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="nanum m-0 font-weight-bold text-primary">작품 키워드</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+
+                  <div id="chartHolder2" style="width:350px; height:400px;">
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Pie Chart -->
             <!-- <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4"> -->
