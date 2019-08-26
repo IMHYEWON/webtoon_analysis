@@ -4,14 +4,14 @@ Chart.defaults.global.defaultFontColor = '#858796';
 
 
 // Bar Chart Example
-var ctx = document.getElementById("myBarChart2");
-var myBarChart2 = new Chart(ctx, {
+var ctx = document.getElementById("keywordbarchart");
+var keywordbarchart = new Chart(ctx, {
   type: 'bar',
   data: {
     // 날짜 정보 넣기
     labels: ["08.16", "08.17", "08.18", "08.19", "08.20", "08.21", "08.22"],
     datasets: [{
-      label: "트위터 언급량",
+      label: "작품 키워드",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
@@ -70,4 +70,3 @@ var myBarChart2 = new Chart(ctx, {
       }
     },
 });
-

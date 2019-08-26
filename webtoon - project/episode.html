@@ -396,6 +396,8 @@
 
           <!-- Content Row -->
           <div class="row">
+
+            <!-- 작품 -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -418,7 +420,7 @@
 
             <!-- 작가 -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
+              <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -462,6 +464,7 @@
               </div>
             </div>
 
+            <!-- 회차정보 -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -480,88 +483,35 @@
               </div>
             </div>
 
+          </div>
 
-
-            <div class="col-xl-7 col-lg-7">
-
-            <div class="col-xl-10 col-md-7 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="nanum text-l font-weight-bold text-primary text-uppercase mb-1">댓글 요약 결과<br></div>
-                        <div class="nanum text-m font-weight-bold mb-1">3줄 요약</div>
-                        <div class="jeju mb-0 mr-3 text-gray-800">1. 댓글 요약 첫번째 <br>2. 댓글 요약 두번째 <br>3. 댓 글요약 세번째</div>
-                        <hr>
-                        <div class="nanum text-m font-weight-bold mb-1">요약 키워드</div>
-                        <div class="jeju mb-0 mr-3 text-gray-800">키워드1, 키워드2, 키워드3, 키워드4, 키워드5, 키워드6, 키워드7, 키워드8, 키워드9, 키워드10</div>
-                        <!-- <div class="nanum h5 mb-0 font-weight-bold text-gray-800">김리아</div> -->
-                      </div>
-                      <!-- <div class="col-auto">
-                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                      </div> -->
+          <div class= "row">
+            <!-- 댓글요약 -->
+            <div class="col-xl-6 col-lg-5 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <h6 class="nanum text-l font-weight-bold text-primary text-uppercase mb-1">댓글 요약 결과<br><br></h6>
+                      <div class="nanum text-m font-weight-bold mb-1">3줄 요약</div>
+                      <div class="jeju mb-0 mr-3 text-gray-800">1. 댓글 요약 첫번째 <br>2. 댓글 요약 두번째 <br>3. 댓 글요약 세번째<br></div>
+                      <hr>
+                      <div class="nanum text-m font-weight-bold mb-1">요약 키워드</div>
+                      <div class="jeju mb-0 mr-3 text-gray-800">키워드1, 키워드2, 키워드3, 키워드4, 키워드5, 키워드6, 키워드7, 키워드8, 키워드9, 키워드10</div>
+                      <!-- <div class="nanum h5 mb-0 font-weight-bold text-gray-800">김리아</div> -->
                     </div>
+                    <!-- <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div> -->
                   </div>
                 </div>
               </div>
 
-              <!-- Area Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">작가 작품 키워드</h6>
-                </div>
-                <div class="card-body">
-                  <!-- <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div> -->
-                  <hr>
-                  여기에다가 작가 작품 키워드 차트 넣기
-                </div>
-              </div>
-
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">별점 변화율</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-line">
-                    <canvas id="myLineChart"></canvas>
-                  </div>
-                  <hr>
-                  별점 변화율 그래프 넣기
-                </div>
-              </div>
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">댓글 수 추이 그래프</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                  <hr>
-                  댓글수 그래프 넣기
-                </div>
-              </div>
-
-              <!-- Bar Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">트윗량 일주일 넣기</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
-                  <hr>
-                  일주일 트윗량 그래프 넣기
-                </div>
-              </div>
 
             </div>
 
-            <!-- Donut Chart -->
-            <div class="col-xl-4 col-lg-5">
+            <!-- 감성분석 -->
+            <div class="col-xl-5 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3">
@@ -576,7 +526,111 @@
                   감성 분석 결과 차트 넣기
                 </div>
               </div>
+
+              </div>
+
             </div>
+
+          <!-- </div> -->
+
+
+
+          <div class= "row">
+
+
+            <!-- 작품키워드 -->
+            <div class="col-xl-6 col-lg-5 col-md-6 col-lg-5">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">작품 키워드</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-bar">
+                    <canvas id="keywordbarchart"></canvas>
+                  </div>
+                  <hr>
+                  여기에다가 작품 키워드 차트 넣기
+                </div>
+              </div>
+
+              </div>
+
+              <!-- 작가키워드 -->
+
+            <div class="col-xl-6 col-lg-5">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">작가  키워드</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-bar">
+                    <canvas id="writerbarchart"></canvas>
+                  </div>
+                  <hr>
+                  여기에다가 작가  키워드 차트 넣기
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+            <div class= "row">
+
+
+              <!-- 별점 변화율 -->
+              <div class="col-xl-4 col-lg-5 col-md-6 col-lg-5">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">별점 변화율</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-line">
+                      <canvas id="myLineChart"></canvas>
+                    </div>
+                    <hr>
+                    별점 변화율 그래프 넣기
+                  </div>
+                </div>
+
+                </div>
+
+                <!-- 작가키워드 -->
+
+
+                <!-- 댓글수 -->
+              <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">댓글 수 추이 그래프</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart"></canvas>
+                    </div>
+                    <hr>
+                    댓글수 그래프 넣기
+                  </div>
+                </div>
+              </div>
+
+              <!-- 트윗량 -->
+              <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">트위터 언급량 그래프</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-bar">
+                      <canvas id="myBarChart"></canvas>
+                    </div>
+                    <hr>
+                    트위터 그래프 넣기
+                  </div>
+                </div>
+              </div>
+
+              </div>
+
           </div>
 
         </div>
