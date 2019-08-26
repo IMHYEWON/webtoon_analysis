@@ -9,13 +9,13 @@ var keywordbarchart = new Chart(ctx, {
   type: 'bar',
   data: {
     // 날짜 정보 넣기
-    labels: ["08.16", "08.17", "08.18", "08.19", "08.20", "08.21", "08.22"],
+    labels: ["스토리", "그림", "생각","진짜","작품","사람","연재","댓글","축하","내용"],
     datasets: [{
       label: "작품 키워드",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [1, 1, 0, 0, 0, 0],
+      data: [2594, 512, 452, 438, 311, 263, 255, 254, 250, 247],
     }],
   },
   options: {

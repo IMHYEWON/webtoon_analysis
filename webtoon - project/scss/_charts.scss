@@ -11,10 +11,28 @@
 // Bar Chart
 .chart-bar {
   position: relative;
-  height: 10rem;
+  height: 20rem;
   width: 80%;
   @include media-breakpoint-up(md) {
     height: 20rem;
+  }
+}
+
+.chart-bar2 {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    height: 30rem;
+  }
+}
+
+.chart-bar3 {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    height: 30rem;
   }
 }
 
